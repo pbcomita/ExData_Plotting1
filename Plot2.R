@@ -6,7 +6,7 @@ subpower1 <- subset(powerdata, powerdata$Date =="1/2/2007" | powerdata$Date =="2
 ## combine time and date to the $Date variable
 subdattime <- paste(subpower1$Date, subpower1$Time)
 subpower1$Date <- strptime(subdattime, "%d/%m/%Y  %H:%M:%S")
-## plot histogram of Global Active Power for Plot 1
-hist(subpower1$Global_active_power, breaks = 12, col = "red", xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
-dev.copy(png, file = "plot1.png", width = 480, height = 480)
+## plot lineplot of Global Active Power for Plot 2
+plot(subpower1$Date, subpower1$Global_active_power, type = "l", lty=1, xlab="", ylab="Global Active Power (kilowatts)")
+dev.copy(png, file = "plot2.png", width = 480, height = 480)
 dev.off(4)
