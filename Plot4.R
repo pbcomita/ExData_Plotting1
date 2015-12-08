@@ -14,7 +14,7 @@ with(subpower1, {
         plot(Date, Sub_metering_1, type = "l", lty=1, xlab="", ylab="Energy sub metering")
                 lines(Date, Sub_metering_2, type = "l", lty=1, col="red")
                 lines(Date, Sub_metering_3, type = "l", lty=1, col="blue")
-                legend("topright", lty=1, col=c("black", "red", "blue"), bty="n", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), cex=0.8, text.width = strwidth("Sub_metering_1        "))
+                legend("topright", lty=1, col=c("black", "red", "blue"), bty="n", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), cex=0.8, text.width = strwidth("Sub_metering_1             "))
         plot(Date, Global_reactive_power, type = "l", lty=1, xpd = TRUE, xlab="datetime", ylab="Global_reactive_power")
 })
 #dev.copy(png, file = "plot4.png", width = 480, height = 480)
